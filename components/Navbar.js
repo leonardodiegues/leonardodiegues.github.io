@@ -1,22 +1,22 @@
-import Link from "next/link";
+import Image from 'next/image';
 
 import styles from "./Navbar.module.css"
 
-const MenuItems = [
+const Social = [
   {
-    title: "Email",
-    logo: "path-to-logo",
+    title: "LinkedIn",
+    logo: "/linkedin-logo.png",
     url: "url"
   },
   {
     title: "Twitter",
-    logo: "path-to-logo",
-    url: "url"
+    logo: "/twitter-logo.png",
+    url: "https://twitter.com/leonardodiegues"
   },
   {
     title: "Github",
-    logo: "path-to-logo",
-    url: "url"
+    logo: "/github-logo.png",
+    url: "https://github.com/leonardodiegues"
   },
 ]
 
@@ -25,19 +25,27 @@ export default function Navbar({ children }) {
     <>
       <nav>
         <div className={styles.wrapper}>
-          <h1 className="title">
-            <Link href="/about">Leonardo Diegues</Link>
-          </h1>
+          <div className={styles.logo}>
+            <h1 className={styles.title}>leonardo diegues</h1>
+            <p className={styles.bio}>data/visual journalist. programming enthusiast.<br />a social scientist currently working at <a className="" href="https://folha.com.br" target="_blank">@folha</a></p>
+          </div>
           <ul className={styles.menu}>
-            {MenuItems.map((item, index) => {
+            {Social.map((item, index) => {
               return (
                 <li key={index}>
-                  <a href={item.url}>{item.title}</a>
+                  <a href={item.url}>
+                    <Image
+                      className="social-logo"
+                      src={item.logo}
+                      alt={item.title}
+                      width="32px"
+                      height="32px"
+                    />
+                  </a>
                 </li>
               )
             })}
           </ul>
-          <p>data/visual journalist. programming enthusiast.<br />a social scientist currently working at <a className="" href="https://folha.com.br" target="_blank">@folha</a></p>
         </div>
       </nav>
     </>

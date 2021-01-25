@@ -1,15 +1,51 @@
 .wrapper {
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
 }
 
-.menu {
+.logo {
+  float: left;
+}
+
+.title {
+  margin: 0 auto;
+  font-family: "Raleway", sans-serif;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 75px;
+}
+
+.bio {
+  font-style: italic;
+}
+
+/* .menu {
   display: grid;
   grid-gap: 10px;
   list-style: none;
   text-align: center;
   width: 70vw;
   justify-content: end;
+} */
+
+.menu {
+  position: relative;
+  float: right;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.menu > li {
+  margin-left: 10px;
+  max-width: 32px;
+  max-height: 32px;
+}
+
+.menu > li > a img {
+  filter: grayscale(1);
+}
+
+.menu > li > a:hover img {
+  filter: grayscale(0);
 }
