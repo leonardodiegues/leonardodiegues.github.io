@@ -2,20 +2,20 @@ import Image from 'next/image';
 
 import styles from "./Navbar.module.css"
 
-const Social = [
+const social = [
   {
     title: "LinkedIn",
-    logo: "/linkedin-logo.png",
+    logo: "/images/linkedin-logo.png",
     url: "url"
   },
   {
     title: "Twitter",
-    logo: "/twitter-logo.png",
+    logo: "/images/twitter-logo.png",
     url: "https://twitter.com/leonardodiegues"
   },
   {
     title: "Github",
-    logo: "/github-logo.png",
+    logo: "/images/github-logo.png",
     url: "https://github.com/leonardodiegues"
   },
 ]
@@ -24,16 +24,19 @@ export default function Navbar({ children }) {
   return (
     <>
       <nav>
-        <div className={styles.wrapper}>
+        <div className={`${styles.wrapper}`}>
           <div className={styles.logo}>
             <h1 className={styles.title}>leonardo diegues</h1>
-            <p className={styles.bio}>data/visual journalist. programming enthusiast.<br />a social scientist currently working at <a className="" href="https://folha.com.br" target="_blank">@folha</a></p>
+            <p className={styles.bio}>
+              data/visual journalist. developer. a social scientist
+              <br />currently working at <a className="" href="https://folha.com.br" target="_blank">folha de são paulo</a>
+            </p>
           </div>
           <ul className={styles.menu}>
-            {Social.map((item, index) => {
+            {social.map((item, index) => {
               return (
                 <li key={index}>
-                  <a href={item.url}>
+                  <a href={item.url} target="_blank">
                     <Image
                       className="social-logo"
                       src={item.logo}

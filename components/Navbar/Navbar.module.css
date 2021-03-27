@@ -8,10 +8,14 @@
 
 .title {
   margin: 0 auto;
-  font-family: "Raleway", sans-serif;
+  font-family: var(--title-font);
   font-size: 64px;
   font-weight: 800;
   line-height: 75px;
+}
+
+.title:hover {
+  color: var(--highlight-blue);
 }
 
 .bio {

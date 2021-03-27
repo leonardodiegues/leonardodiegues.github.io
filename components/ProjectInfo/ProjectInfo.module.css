@@ -1,0 +1,29 @@
+.projectInfo {
+  /* position: -webkit-sticky;
+  position: sticky;
+  top: 0; */
+  max-width: 475px;
+  margin-left: auto;
+  float: left;
+}
+
+.title {
+  margin: 0 auto;
+  font-family: var(--title-font);
+  color: var(--highlight-blue);
+}
+
+.dateAndAuthors {
+  font-size: 10px;
+}
+
+.tags {
+  margin: 0 auto;
+  margin-top: 5px;
+  color: var(--default-gray);
+  font-size: 10px;
+}
+
+.tools {
+  font-size: 10px;
+}

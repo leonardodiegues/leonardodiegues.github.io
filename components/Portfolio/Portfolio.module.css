@@ -1,0 +1,10 @@
+.portfolio {
+  display: flex;
+  flex-direction: row;
+  margin-top: 70px;
+}
+
+.grid {
+  max-width: 750px;
+  margin-right: 100px;
+}
